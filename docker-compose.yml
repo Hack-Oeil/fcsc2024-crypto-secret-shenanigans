@@ -1,11 +1,11 @@
 version: '3.9'
 services:
   ssh.cyrhades.fr:
-    build: ssh
+    build: ./.docker/ssh
   webssh.cyrhades.fr:
-    build: webssh
+    build: ./.docker/webssh
     ports:
-    - ${PORT}:8888
+      - ${PORT}:8888
   secret-shenanigans.cyrhades.fr:
     image: anssi/fcsc2024-crypto-secret-shenanigans:latest
     ports:
